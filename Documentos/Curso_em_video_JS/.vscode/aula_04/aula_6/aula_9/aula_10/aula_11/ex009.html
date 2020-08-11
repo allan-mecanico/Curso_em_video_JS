@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Nacionalidade</title>
+</head>
+<body>
+    <h1>Controle de Nacionalidade</h1> 
+    Nacionalidade:<input type="text" name="ncn" id="ncn">
+    <input type="button" value="Consultar" onclick="verificar()">
+    <div id="res"> 
+
+    </div>
+    <script>
+        function verificar(){ 
+            var nacionalidade = window.document.querySelector('input#ncn')
+            var res = window.document.querySelector('div#res')
+            var  ncn = (nacionalidade.value)
+            //res.innerHTML = `<p>Sua nacionalidade é <strong>Brasileiro</strong></p>`
+            if (ncn == 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>Brasileiro</p>`
+            } else res.innerHTML += `<p> Você é <strong>estrangeiro</strong> </p>`
+            res.innerHTML += `<p>Continue consultando</p>`
+            }
+            
+
+    </script>
+</body>
+</html>
